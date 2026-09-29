@@ -1434,7 +1434,7 @@ iOS Shortcut
 | 代表性题库 Fixtures | `示例题库.json`，内容为脱敏数学示例 |
 | 最近通过的构建／测试命令 | 2026-09-29：核心 `swift test --scratch-path /private/tmp/simplelian-core-build` 8／8；`xcodebuild ... build-for-testing` 通过；generic Simulator 和 generic iOS build 通过 |
 | 最近真机结果 | 尚无 |
-| 需要保留的未提交代码改动 | 无；本地 `main` 跟踪公开远端 `origin/main`，继续开发前仍须先检查 Git 状态 |
+| 需要保留的未提交代码改动 | `SimpleLian.xcodeproj/project.pbxproj` 含 Xcode 为本机真机安装写入的 Personal Team 设置；这是用户本地签名配置，故意不上传公开仓库，后续不得丢弃或用 XcodeGen 直接覆盖。其余已提交；本地 `main` 跟踪 `origin/main` |
 
 ---
 
