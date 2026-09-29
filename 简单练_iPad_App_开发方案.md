@@ -1352,11 +1352,11 @@ iOS Shortcut
 - 最后更新：2026-09-29。
 - 当前阶段：v0.3 第一版代码完成，等待连接目标 iPad 进行 P6 真机验收。
 - 已存在项目内容：`SimpleLian.xcodeproj`、`project.yml`、`SimpleLian/` App 源码、`SimpleLianTests/`、`Core/` 纯逻辑包与测试、`示例题库.json`、`README.md` 和本方案。
-- Git：2026-09-29 已在项目目录初始化本地仓库并准备图标版提交；GitHub 尚无对应仓库，远端创建等待用户确认公开或私有。
+- Git：2026-09-29 已初始化本地仓库并提交图标版；公开远端为 `https://github.com/hutianyi/simple-lian`，`main` 已推送并设置为跟踪分支。
 - 已确认：第 5 节复习规则、第 30 节范围，以及本文件承担进度和上下文接续记录。
 - 技术待验证：SwiftData 真机首次建库、导入／中断恢复／备份恢复的完整交互、签名安装、目标 iPad 横竖屏与较长题目显示。
-- 当前实际阻塞：目标 iPad 已识别为 iPadOS 27，但免费 Personal Team 在该设备上的 3 个 App 名额已经用满；需先备份并删除一个现有免费签名 App，或改用付费开发者团队，才能安装简单练。GitHub 远端还需确认可见性。
-- 下一步：释放一个免费签名 App 名额后重新安装，并按第 27 节用 `示例题库.json` 走一轮导入、练习、批改、订正、退出重开和备份恢复；确认 GitHub 可见性后创建 `hutianyi/simple-lian` 并推送。
+- 当前实际阻塞：目标 iPad 已识别为 iPadOS 27，但免费 Personal Team 在该设备上的 3 个 App 名额已经用满；需先备份并删除一个现有免费签名 App，或改用付费开发者团队，才能安装简单练。
+- 下一步：释放一个免费签名 App 名额后重新安装，并按第 27 节用 `示例题库.json` 走一轮导入、练习、批改、订正、退出重开和备份恢复。
 
 ## 36.2 阶段状态
 
@@ -1377,7 +1377,7 @@ iOS Shortcut
 |---|---|---|---|---|
 | 2026-09-29 | 审阅 v0.1，与用户明确自动安排和掌握退出，再修订 v0.2 | 仅本方案；加入进度与接续区 | 章节连续性、Markdown 代码块、JSON 示例、日期演算与关键规则一致性通过；未构建或运行 App | 用户要求开发后进行 P0 |
 | 2026-09-29 | 按 v0.2 方案开发第一版 | 新建 XcodeGen 工程、SwiftData 模型、导入／调度／练习／订正／备份服务、三页 SwiftUI 界面、核心测试、集成测试源码、示例题库和 README；本方案升级为 v0.3 | `swift test --scratch-path /private/tmp/simplelian-core-build`：8／8 通过；`xcodebuild ... build-for-testing`：通过；Simulator 与 generic iOS 未签名编译：通过。iOS 27 模拟器未启动，真机未连接 | 连接目标 iPad，配置签名后安装并按第 27 节验收 |
-| 2026-09-29 | 增加 App 图标并准备 GitHub 发布 | 新增 `Design/AppIcon-master.png`、AppIcon 资源目录和 `.gitignore`，更新 README／XcodeGen 配置；准备本地 Git 提交 | 1024×1024 PNG、无 Alpha；AppIcon 设备构建通过；目标 iPad 安装被免费签名 3 App 上限阻止，尚未运行 | 用户确认 GitHub 私有或公开后创建 `hutianyi/simple-lian` 并推送；释放设备名额后真机验收 |
+| 2026-09-29 | 增加 App 图标并公开发布 GitHub | 新增 `Design/AppIcon-master.png`、AppIcon 资源目录和 `.gitignore`，更新 README／XcodeGen 配置；创建公开仓库 `hutianyi/simple-lian` 并推送 `main` | 1024×1024 PNG、无 Alpha；核心测试 8／8、AppIcon iPadOS 设备构建、`git diff --cached --check`、敏感信息与构建产物扫描通过；目标 iPad 安装被免费签名 3 App 上限阻止，尚未运行 | 释放设备名额后真机验收 |
 
 后续每轮追加一行；复杂阻塞可在下面补充短说明，不覆盖已有事实。实际代码开始后须填写具体相对文件路径和验证命令，不使用“全部已测”代替证据。
 
@@ -1434,7 +1434,7 @@ iOS Shortcut
 | 代表性题库 Fixtures | `示例题库.json`，内容为脱敏数学示例 |
 | 最近通过的构建／测试命令 | 2026-09-29：核心 `swift test --scratch-path /private/tmp/simplelian-core-build` 8／8；`xcodebuild ... build-for-testing` 通过；generic Simulator 和 generic iOS build 通过 |
 | 最近真机结果 | 尚无 |
-| 需要保留的未提交代码改动 | 图标版将作为本地首个 Git 提交；创建远端前不得重置或清理项目内容 |
+| 需要保留的未提交代码改动 | 无；本地 `main` 跟踪公开远端 `origin/main`，继续开发前仍须先检查 Git 状态 |
 
 ---
 
