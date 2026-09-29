@@ -1,0 +1,54 @@
+name: SimpleLian
+options:
+  deploymentTarget:
+    iOS: "27.0"
+  groupSortPosition: top
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    PRODUCT_MODULE_NAME: SimpleLian
+    SWIFT_STRICT_CONCURRENCY: minimal
+    TARGETED_DEVICE_FAMILY: "2"
+    SUPPORTS_MACCATALYST: NO
+    GENERATE_INFOPLIST_FILE: YES
+    INFOPLIST_KEY_CFBundleDisplayName: 简单练
+    INFOPLIST_KEY_UILaunchScreen_Generation: YES
+    INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents: YES
+    INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad: "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"
+    PRODUCT_BUNDLE_IDENTIFIER: com.hutianyi.SimpleLian
+targets:
+  SimpleLian:
+    type: application
+    platform: iOS
+    sources:
+      - path: SimpleLian
+      - path: Core/Sources/SimpleLianCore
+    settings:
+      base:
+        PRODUCT_NAME: SimpleLian
+        CODE_SIGN_STYLE: Automatic
+        DEVELOPMENT_TEAM: ""
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+    scheme:
+      testTargets:
+        - SimpleLianTests
+  SimpleLianTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: SimpleLianTests
+    dependencies:
+      - target: SimpleLian
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.hutianyi.SimpleLianTests
+        PRODUCT_MODULE_NAME: SimpleLianTests
+schemes:
+  SimpleLian:
+    build:
+      targets:
+        SimpleLian: all
+        SimpleLianTests: [test]
+    test:
+      targets:
+        - SimpleLianTests

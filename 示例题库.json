@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "batch_title": "简单练示例",
+  "source_note": "用于首次安装后的导入流程检查",
+  "groups": [
+    {
+      "group_id": "sample-fraction-addition",
+      "title": "同分母分数加法",
+      "original": {
+        "question_id": "sample-original-1",
+        "prompt_markdown": "计算 **2/7 + 3/7**。",
+        "answer_markdown": "**5/7**",
+        "explanation_markdown": "分母相同，分母不变，把分子 2 和 3 相加。"
+      },
+      "variants": [
+        {
+          "question_id": "sample-near-1",
+          "variant_kind": "near",
+          "prompt_markdown": "计算 **1/9 + 5/9**。",
+          "answer_markdown": "**2/3**",
+          "explanation_markdown": "先得 6/9，再约分为 2/3。"
+        },
+        {
+          "question_id": "sample-near-2",
+          "variant_kind": "near",
+          "prompt_markdown": "计算 **4/11 + 2/11**。",
+          "answer_markdown": "**6/11**",
+          "explanation_markdown": "分母不变，分子相加。"
+        },
+        {
+          "question_id": "sample-transfer-1",
+          "variant_kind": "transfer",
+          "prompt_markdown": "小明喝了 3/8 杯水，又喝了 2/8 杯，一共喝了多少杯？",
+          "answer_markdown": "**5/8 杯**",
+          "explanation_markdown": "把两次喝水的同分母分数相加。"
+        }
+      ]
+    }
+  ]
+}
